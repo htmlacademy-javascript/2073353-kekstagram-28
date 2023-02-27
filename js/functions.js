@@ -2,6 +2,9 @@
 
 const checkLength = (string, maxLength) => string.length < maxLength;
 
+checkLength('строка', 10);
+
+
 // Строка является палиндромом
 
 const isPalindrome = (string) => {
@@ -13,6 +16,8 @@ const isPalindrome = (string) => {
   return reverseWord === stringTransformed;
 };
 
+isPalindrome ('Лёша на полке клопа нашёл ');
+
 // Функция для извлечения цифр из строки.
 
 const extractInteger = (number) => {
@@ -20,6 +25,7 @@ const extractInteger = (number) => {
   const result = parseInt(onlyNumbers, 10);
   return result;
 };
+extractInteger('агент 007');
 
 //Функция добавления символов перед строкой для увеличения ее до заданного объема.
 
@@ -40,3 +46,4 @@ const fillBefore = (string, length, filler) => {
   return resultString + string;
 };
 
+fillBefore ('q', 4, 'we');
