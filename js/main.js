@@ -72,4 +72,4 @@ const createObject = () => ({
   comments: postsArray(getRandomInteger(1, 3), createComment)
 });
 
-createObject();
+postsArray(25, createObject);
