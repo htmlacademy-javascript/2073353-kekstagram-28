@@ -9,9 +9,7 @@ const createPhotoElement = ({url, comments, likes}) => {
   return newPicture;
 };
 
-
 export const renderPhotos = (photos) => {
-
   const pictureContainer = document.querySelector('.pictures');
   pictureContainer.append(...photos.map(createPhotoElement));
 };

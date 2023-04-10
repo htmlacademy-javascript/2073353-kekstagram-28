@@ -31,8 +31,4 @@ const createObject = () => ({
   comments: createComments(getRandomInteger(1, 3))
 });
 
-const createPosts = (arrayLength) => Array.from({ length: arrayLength }, createObject);
-
-const mockData = createPosts(25);
-
-export {mockData};
+export const createPosts = (arrayLength) => Array.from({ length: arrayLength }, createObject);
