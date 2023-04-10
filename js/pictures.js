@@ -13,7 +13,5 @@ const createPhotoElement = ({url, comments, likes}) => {
 export const renderPhotos = (photos) => {
 
   const pictureContainer = document.querySelector('.pictures');
-  const pictureArray = photos.map((data) => createPhotoElement(data));
-  pictureContainer.append(...pictureArray);
+  pictureContainer.append(...photos.map(createPhotoElement));
 };
-
