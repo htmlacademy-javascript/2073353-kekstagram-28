@@ -21,14 +21,14 @@ const createComment = () => ({
 });
 
 
-const postsArray = (arrayLength, buildFunction) => Array.from({ length: arrayLength }, buildFunction);
+const createComments = (arrayLength) => Array.from({ length: arrayLength }, createComment);
 
 const createObject = () => ({
   id: getRandomElementFromPull(objectIDs),
   url: `photos/${getRandomElementFromPull(photoIDs)}.jpg`, //'строка — адрес картинки вида photos/{{i}}.jpg, где {{i}} — это число от 1 до 25. Адреса картинок не должны повторяться.'
   description: getRandomElementFromArray(photoDescription),//'строка — описание фотографии. Описание придумайте самостоятельно.',
   likes: getRandomInteger(15, 200), //'число — количество лайков, поставленных фотографии. Случайное число от 15 до 200.',
-  comments: postsArray(getRandomInteger(1, 3), createComment)
+  comments: createComments(getRandomInteger(1, 3))
 });
 
-postsArray(25, createObject);
+export const createPosts = (arrayLength) => Array.from({ length: arrayLength }, createObject);
